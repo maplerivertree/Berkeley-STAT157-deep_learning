@@ -1,4 +1,4 @@
-#sum by dimension, .sum(x, *), .dot() vs. (a * b), mean,
+#sum by dimension, .sum(x, *), .dot() vs. (a * b), mean
 from mxnet import nd
 # sum by dimention(row, colums, ..)
 
@@ -16,7 +16,7 @@ print(nd.sum(a, 1))
 print(nd.sum(a, 2))
 print(nd.mean(a))
 
-""""""
+"""""" 
 
 b = nd.ones(5)
 c = nd.arange(5) + 1.0
