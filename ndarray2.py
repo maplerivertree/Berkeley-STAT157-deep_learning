@@ -1,4 +1,4 @@
-#sum by dimension, .sum(x, *), .dot() vs. (a * b), mean
+#sum by dimension, .sum(x, *), .dot() vs. (a * b) broadcast
 from mxnet import nd
 # sum by dimention(row, colums, ..)
 
@@ -25,7 +25,7 @@ print(b, c, nd.dot(b,c))
 """"""
 X = nd.arange(12).reshape(3,4)
 v = nd.array([1,2,3,5])
-#Difference nd.dot & multiplication
+#Difference nd.dot & broadcasting
 print(X, v)
 print(nd.dot(X,v), X* v)
 
@@ -34,13 +34,12 @@ print(nd.dot(X,v), X* v)
  [ 4.  5.  6.  7.]
  [ 8.  9. 10. 11.]]
 
-
 [1. 2. 3. 5.]
 
-
+nd.dot:
 [ 23.  67. 111.]
 
-
+broadcasting:
 [[ 0.  2.  6. 15.]
  [ 4. 10. 18. 35.]
  [ 8. 18. 30. 55.]]
